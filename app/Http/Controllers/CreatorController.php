@@ -15,6 +15,22 @@ use Socialite;
 
 class CreatorController extends Controller
 {
+    public function success(Request $request)
+    {
+        DB::table('withdrawals')->where('id',$request->id)->update([
+            'status' =>  2,
+            ]);
+        # code...
+
+    }
+    public function gagal(Request $request)
+    {
+        DB::table('withdrawals')->where('id',$request->id)->update([
+            'status' =>  3,
+            ]);
+        # code...
+
+    }
     public function __construct()
     {
         $this->middleware(['auth','verified']);

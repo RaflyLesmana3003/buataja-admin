@@ -83,147 +83,15 @@
 
                     <ul class="navbar-nav">
                     @if (null !== Auth::user())
-                    @if (Auth::user()->level == 1)
-                    <li class="nav-item">
-                            <a class="nav-link" href="#navbar-home" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-maps">
-                                <i class="fa fa-home text-primary"></i>
-                                <span class="nav-link-text">home</span>
-                            </a>
-                            <div class="collapse" id="navbar-home">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="{{ url('106a6c241b8797f52e1e77317b96a201') }}" class="nav-link">home user</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="{{ url('106a6c241b8797f52e1e77317b96a201/kreator') }}" class="nav-link">home kreator</a>
-                                    </li>
-                                    <!-- <li class="nav-item">
-                                        <a href="{{ url('list/konten') }}" class="nav-link">daftar konten</a>
-                                    </li> -->
-                                </ul>
-                            </div>
-                        </li>
+                    @if (Auth::user()->level == 2)
+                   
                         <li class="nav-item">
-                            <a class="nav-link" href="#navbar-home2" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-maps">
-                                <i class="fa fa-users text-primary"></i>
-                                <span class="nav-link-text">kreator</span>
-                            </a>
-                            <div class="collapse" id="navbar-home2">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="{{ url('106a6c241b8797f52e1e77317b96a201') }}" class="nav-link">dukungan</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="{{ url('106a6c241b8797f52e1e77317b96a201/kreator') }}" class="nav-link">diikuti</a>
-                                    </li>
-                                    <!-- <li class="nav-item">
-                                        <a href="{{ url('list/konten') }}" class="nav-link">daftar konten</a>
-                                    </li> -->
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#navbar-maps" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-maps">
-                                <i class="ni ni-spaceship text-primary"></i>
-                                <span class="nav-link-text">Konten</span>
-                            </a>
-                            <div class="collapse" id="navbar-maps">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="{{ url('76ea0bebb3c22822b4f0dd9c9fd021c5') }}" class="nav-link">tambah konten</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="{{ url('list/konten') }}" class="nav-link">daftar konten</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="{{ url('member') }}">
-                                <i class="fa fa-user text-primary"></i>
-                                <span class="nav-link-text">member</span>
-                            </a>
-                        </li> -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url('f27fc78ffa140e97e0c535374a2a2213') }}">
+                            <a class="nav-link" href="/">
                                 <i class="fa fa-money text-primary"></i>
-                                <span class="nav-link-text">saldo</span>
+                                <span class="nav-link-text">pencairan</span>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url('de95b43bceeb4b998aed4aed5cef1ae7#paket') }}">
-                                <i class="fa fa-archive text-primary"></i>
-                                <span class="nav-link-text">paket</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url('dc7161be3dbf2250c8954e560cc35060') }}">
-                                <i class="fa fa-address-card text-primary"></i>
-                                <span class="nav-link-text">dashboard kreator</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#navbar-maps1" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-maps1">
-                                <i class="fa fa-cog text-primary"></i>
-                                <span class="nav-link-text">pengaturan</span>
-                            </a>
-                            <div class="collapse" id="navbar-maps1">
-                                <ul class="nav nav-sm flex-column">
-
-                                    <li class="nav-item">
-                                        <a href="{{ url('de95b43bceeb4b998aed4aed5cef1ae7') }}" class="nav-link">pengaturan kreator</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="{{ url('de95b43bceeb4b998aed4aed5cef1ae7/user') }}" class="nav-link">pengaturan user</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"">
-                                <i class="ni ni-user-run text-primary"></i>
-                                <span class="nav-link-text">Logout</span>
-                            </a>
-                        </li>
-                        @else
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url('106a6c241b8797f52e1e77317b96a201') }}">
-                                <i class="fa fa-home text-primary"></i>
-                                <span class="nav-link-text">Home</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#navbar-home" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-maps">
-                                <i class="fa fa-users text-primary"></i>
-                                <span class="nav-link-text">kreator</span>
-                            </a>
-                            <div class="collapse" id="navbar-home">
-                                <ul class="nav nav-sm flex-column">
-                                    <li class="nav-item">
-                                        <a href="{{ url('106a6c241b8797f52e1e77317b96a201') }}" class="nav-link">dukungan</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="{{ url('106a6c241b8797f52e1e77317b96a201/kreator') }}" class="nav-link">diikuti</a>
-                                    </li>
-                                    <!-- <li class="nav-item">
-                                        <a href="{{ url('list/konten') }}" class="nav-link">daftar konten</a>
-                                    </li> -->
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url('de95b43bceeb4b998aed4aed5cef1ae7/user') }}">
-                                <i class="fa fa-cog text-primary"></i>
-                                <span class="nav-link-text">pengaturan</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"">
-                                <i class="ni ni-user-run text-primary"></i>
-                                <span class="nav-link-text">Logout</span>
-                            </a>
-                        </li>
-                        
+                       
                         @endif
                         @else
                         @if (Route::has('login'))
@@ -266,27 +134,7 @@
                         
                     </ul>
                     <hr class="my-3">
-                    <ul class="navbar-nav mb-md-3">
-            <li class="nav-item">
-              <a class="nav-link" href="#" target="_blank">
-
-                <span class="nav-link-text text-muted">tips</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" target="_blank">
-
-                <span class="nav-link-text text-muted">tentang kami</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" target="_blank">
-
-                <span class="nav-link-text text-muted">bantuan</span>
-              </a>
-            </li>
-
-          </ul>
+          
                 </div>
             </div>
         </div>
@@ -402,26 +250,10 @@
                 <div class="dropdown-header noti-title">
                   <h6 class="text-overflow m-0">list kreator!</h6>
                 </div>
-                <a href="{{url('b84dc340d0bd103ac5a157ce6387ee21/')}}" class="dropdown-item">
+                <a href="/" class="dropdown-item">
                   <i class="fa fa-users text-primary"></i>
-                  <span>dukungan</span>
+                  <span>penarikan</span>
                 </a>
-                <a href="{{ url('6d2f2f9fc3eb0b0d0ebf36653ad7015e') }}" class="dropdown-item">
-                  <i class="ni ni-single-02 text-primary"></i>
-                  <span>diikuti</span>
-                </a>
-                <div class="dropdown-divider"></div>
-
-                <a href="{{ url('106a6c241b8797f52e1e77317b96a201') }}" class="dropdown-item">
-                  <i class="fa fa-home text-primary"></i>
-                  <span>home user</span>
-                </a>
-
-                <a href="{{ url('de95b43bceeb4b998aed4aed5cef1ae7/user') }}" class="dropdown-item">
-                  <i class="fa fa-cog text-primary"></i>
-                  <span>pengaturan profil</span>
-                </a>
-
                 <div class="dropdown-divider"></div>
                 @if(Auth::user()->level == 0)
                 <a href="{{ url('8f8fe8570a6fca0299bce1c90079cbe6/1') }}" class="dropdown-item">
